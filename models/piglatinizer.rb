@@ -6,6 +6,7 @@ class PigLatinizer
 
   def piglatinize(text)
     # binding.pry
+    lowercase_text = text.downcase
     vowels = %w[a e i o u]
     consonants = %w[b c d f g h j k l m n p q r s t v w x y z]
       if vowels.include?(text[0])
