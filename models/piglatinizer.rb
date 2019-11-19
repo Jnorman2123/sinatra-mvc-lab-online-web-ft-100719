@@ -5,7 +5,7 @@ class PigLatinizer
     @text = text
   end
 
-  def translate_to_piglatin
+  def piglatinize
     vowels = %w[a e i o u]
     consonants = %w[b c d f g h j k l m n p q r s t v w x y z]
     @text.split(" ").map do |word|
