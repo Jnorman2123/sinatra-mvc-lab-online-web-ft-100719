@@ -26,5 +26,5 @@ class PigLatinizer
 
   def splits(text)
     text.split(" ")
-  end 
+  end
 end
