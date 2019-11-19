@@ -11,13 +11,13 @@ class PigLatinizer
       if vowels.include?(text[0])
         text + "way"
       elsif consonants.include?(text[0]) && consonants.include?(text[1]) && consonants.include?(text[2])
-        text[3..-1] + text[0..2] + "way"
+        text[3..-1] + text[0..2] + "ay"
       elsif consonants.include?(text[0]) && consonants.include?(text[1])
-        text[2..-1] + text[0..1] + "way"
+        text[2..-1] + text[0..1] + "ay"
       elsif text[0..1] == "qu"
-        text[2..-1] + text[0..1] + "way"
+        text[2..-1] + text[0..1] + "ay"
       elsif consonants.include?(text[0])
-        text[1..-1] + text[0] + "way"
+        text[1..-1] + text[0] + "ay"
       end
 
   end
