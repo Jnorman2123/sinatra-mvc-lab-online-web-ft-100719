@@ -8,7 +8,7 @@ class App < Sinatra::Base
   end
 
   post '/' do
-    params
+    params[:words_to_translate]
 
   end
 end
