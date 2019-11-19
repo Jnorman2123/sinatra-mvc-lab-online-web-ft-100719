@@ -23,6 +23,7 @@ class PigLatinizer
         word[2..-1] + word[0..1] + "way"
       elsif consonants.include?(word[0])
         word[1..-1] + word[0] + "way"
+      end
     end
   end
 end
