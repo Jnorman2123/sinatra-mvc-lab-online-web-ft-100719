@@ -19,6 +19,9 @@ class PigLatinizer
       elsif consonants.include?(text[0])
         text[1..-1] + text[0] + "ay"
       end
+  end
 
+  def splits(text)
+    split_text = text.split(" ")
   end
 end
