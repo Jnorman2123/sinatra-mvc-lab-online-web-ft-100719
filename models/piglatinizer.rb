@@ -5,6 +5,7 @@ class PigLatinizer
   end
 
   def piglatinize(text)
+    binding.pry
     vowels = %w[a e i o u]
     consonants = %w[b c d f g h j k l m n p q r s t v w x y z]
       if vowels.include?(text[0])
@@ -18,6 +19,6 @@ class PigLatinizer
       elsif consonants.include?(@text[0])
         text[1..-1] + text[0] + "way"
       end
-      binding.pry
+
   end
 end
