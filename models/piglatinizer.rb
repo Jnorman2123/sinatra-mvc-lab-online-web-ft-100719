@@ -1,5 +1,4 @@
 class PigLatinizer
-  attr_accessor :text
 
   def initialize
 
@@ -7,7 +6,7 @@ class PigLatinizer
 
   def piglatinize(text)
     vowels = %w[a e i o u]
-    consonants = %w[b c d f g h j k l m n p q r s t v w x y z]|
+    consonants = %w[b c d f g h j k l m n p q r s t v w x y z]
       if vowels.include?(@text[0])
         @text + "way"
       elsif consonants.include?(@text[0]) && consonants.include?(@text[1]) && consonants.include?(@text[2])
