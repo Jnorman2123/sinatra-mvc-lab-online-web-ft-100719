@@ -9,7 +9,7 @@ class App < Sinatra::Base
   end
 
   post '/' do
-    params[:words_to_translate]
+    Piglatinizer.new(params[:words_to_translate])
 
     redirect "/piglatinized_words"
   end
