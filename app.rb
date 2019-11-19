@@ -8,7 +8,7 @@ class App < Sinatra::Base
     erb :user_input
   end
 
-  post '/piglatinized_words' do
+  post '/piglatinize' do
     @translation = PigLatinizer.new(params[:words_to_translate])
 
     redirect "/piglatinized_words"
