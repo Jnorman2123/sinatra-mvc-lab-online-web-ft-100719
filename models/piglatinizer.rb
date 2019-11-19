@@ -16,7 +16,7 @@ class PigLatinizer
         text[2..-1] + text[0..1] + "way"
       elsif text[0..1] == "qu"
         text[2..-1] + text[0..1] + "way"
-      elsif consonants.include?(@text[0])
+      elsif consonants.include?(text[0])
         text[1..-1] + text[0] + "way"
       end
 
