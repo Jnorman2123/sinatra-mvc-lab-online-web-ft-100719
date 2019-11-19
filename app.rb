@@ -9,8 +9,8 @@ class App < Sinatra::Base
   end
 
   post '/piglatinized_words' do
-    translate = PigLatinizer.new(params[:words_to_translate])
-    @translation = translate.translate_to_piglatin
+    @translation = PigLatinizer.new(params[:words_to_translate])
+
     redirect "/piglatinized_words"
   end
 
