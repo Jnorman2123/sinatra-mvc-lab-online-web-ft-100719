@@ -5,7 +5,7 @@ class PigLatinizer
     @text = text.downcase
   end
 
-  def split_words 
+  def split_words
     words = @text.split(" ")
-  end 
+  end
 end
