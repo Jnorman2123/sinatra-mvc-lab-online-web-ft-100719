@@ -9,16 +9,16 @@ class PigLatinizer
     lowercase_text = text.downcase
     vowels = %w[a e i o u]
     consonants = %w[b c d f g h j k l m n p q r s t v w x y z]
-      if vowels.include?(text[0])
-        text + "way"
-      elsif consonants.include?(text[0]) && consonants.include?(text[1]) && consonants.include?(text[2])
-        text[3..-1] + text[0..2] + "ay"
-      elsif consonants.include?(text[0]) && consonants.include?(text[1])
-        text[2..-1] + text[0..1] + "ay"
-      elsif text[0..1] == "qu"
-        text[2..-1] + text[0..1] + "ay"
-      elsif consonants.include?(text[0])
-        text[1..-1] + text[0] + "ay"
+      if vowels.include?(lowercase_text[0])
+        lowercase_text + "way"
+      elsif consonants.include?(lowercase_text[0]) && consonants.include?(lowercase_text[1]) && consonants.include?(lowercase_text[2])
+        lowercase_text[3..-1] + lowercase_text[0..2] + "ay"
+      elsif consonants.include?(lowercase_text[0]) && consonants.include?(lowercase_text[1])
+        lowercase_text[2..-1] + lowercase_text[0..1] + "ay"
+      elsif lowercase_text[0..1] == "qu"
+        lowercase_text[2..-1] + lowercase_text[0..1] + "ay"
+      elsif consonants.include?(lowercase_text[0])
+        lowercase_text[1..-1] + lowercase_text[0] + "ay"
       end
 
   end
