@@ -7,20 +7,18 @@ class PigLatinizer
 
   def piglatinize
     vowels = %w[a e i o u]
-    consonants = %w[b c d f g h j k l m n p q r s t v w x y z]
-    @text.split(" ").map do |word|
-      if vowels.include?(word[0])
-        word + "way"
-      elsif consonants.include?(word[0]) && consonants.include?(word[1]) && consonants.include?(word[2])
-        word[3..-1] + word[0..2] + "way"
-      elsif consonants.include?(word[0]) && consonants.include?(word[1])
-        word[2..-1] + word[0..1] + "way"
-      elsif word[0..1] == "qu"
-        word[2..-1] + word[0..1] + "way"
-      elsif consonants.include?(word[0])
-        word[1..-1] + word[0] + "way"
+    consonants = %w[b c d f g h j k l m n p q r s t v w x y z]|
+      if vowels.include?(@text[0])
+        @text + "way"
+      elsif consonants.include?(@text[0]) && consonants.include?(@text[1]) && consonants.include?(@text[2])
+        @text[3..-1] + @text[0..2] + "way"
+      elsif consonants.include?(@text[0]) && consonants.include?(@text[1])
+        @text[2..-1] + @text[0..1] + "way"
+      elsif @text[0..1] == "qu"
+        @text[2..-1] + @text[0..1] + "way"
+      elsif consonants.include?(@text[0])
+        @text[1..-1] + @text[0] + "way"
       end
       binding.pry
-    end
   end
 end
