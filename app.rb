@@ -12,7 +12,7 @@ class App < Sinatra::Base
   post '/piglatinize' do
     new_output = PigLatinizer.new
     @translation = new_output.piglatinize(params[:user_phrase])
-    
+
     erb :piglatinize
   end
 
