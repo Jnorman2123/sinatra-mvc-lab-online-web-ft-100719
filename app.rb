@@ -10,6 +10,11 @@ class App < Sinatra::Base
   post '/' do
     params[:words_to_translate]
 
-    erb :piglatinized_words
+    redirect "/piglatinized_words"
   end
+
+  get '/piglatinized_words' do 
+
+    erb :piglatinized_words
+  end 
 end
