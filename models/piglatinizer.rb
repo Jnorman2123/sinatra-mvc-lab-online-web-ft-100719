@@ -6,7 +6,7 @@ class PigLatinizer
   end
 
   def split_words
-    @words = @text.split(" ")
+    @words = @text.split
   end
 
   def translate_to_piglatin
