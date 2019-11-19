@@ -14,8 +14,8 @@ class App < Sinatra::Base
     redirect "/piglatinized_words"
   end
 
-  get '/piglatinized_words' do
+  get '/piglatinize' do
 
-    erb :piglatinized_words
+    erb :piglatinize
   end
 end
