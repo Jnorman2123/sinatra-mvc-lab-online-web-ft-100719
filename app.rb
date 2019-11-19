@@ -11,7 +11,7 @@ class App < Sinatra::Base
   post '/piglatinize' do
     @translation = PigLatinizer.new(params[:words_to_translate])
 
-    redirect "/piglatinized_words"
+    redirect "/piglatinize"
   end
 
   get '/piglatinize' do
